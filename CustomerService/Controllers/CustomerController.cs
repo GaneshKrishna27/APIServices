@@ -57,7 +57,7 @@ namespace CustomerService.Controllers
         public void Put(int id)
         {
             Customer p = db.Customer.Find(id);
-            p.Cname = "krishnaKrish";
+            
             db.Customer.Update(p);
             db.SaveChanges();
         }
@@ -66,6 +66,9 @@ namespace CustomerService.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            Customer p = db.Customer.Find(id);
+            db.Customer.Remove(p);
+            db.SaveChanges();
         }
     }
 }
