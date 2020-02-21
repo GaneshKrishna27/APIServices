@@ -25,9 +25,9 @@ namespace HandsOnAPIDemo2.Controllers
         public IActionResult Get(string id)
         {
             return Ok(repository.GetById(id));
-        }
+        }                                                                                                                                                                                                                                                   
         [HttpPost]
-        [Route("Add")]
+        [Route("Add")]                                                                       
         public IActionResult Add(Employee data)
         {
             repository.Add(data);
